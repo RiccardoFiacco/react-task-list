@@ -1,4 +1,4 @@
-export const tasks = [
+const tasks = [
 	{
 		id: 1,
 		title: 'Implementare la homepage',
@@ -72,3 +72,5 @@ export const tasks = [
 ]
 
 console.log(tasks)
+
+export {tasks}
