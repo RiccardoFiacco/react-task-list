@@ -10,7 +10,7 @@ function App() {
     return count
   }
   return ( //restituisco il jsx
-    <div>
+    <div className='pl-25'>
       <h1 className='bgcolor-aqua'>Task Manager</h1> 
       <div>
          <h3>Current Task {notCompletedCount}</h3> {/*qui vado a restituire il valore del primo count */}
@@ -20,7 +20,7 @@ function App() {
           return (
             <div key = {el.id}>
               <p>
-                <span className='p-10r'>{el.title}</span>
+                <span className='p-10r'><strong>{el.title}</strong></span>
                 <span className='bgcolor-orange'> {el.state}</span>
               </p>
               <p>Priority {el.priority}</p>
@@ -40,7 +40,7 @@ function App() {
             return (
               <div key = {el.id}>
                 <p>
-                  <span className='p-10r'>{el.title}</span>
+                  <span className='p-10r'><strong>{el.title}</strong></span>
                   <span className='bgcolor-orange'>{el.state}</span>
                 </p>
                 <p>Priority {el.priority}</p>
