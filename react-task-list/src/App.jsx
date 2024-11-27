@@ -10,15 +10,18 @@ function App() {
     return count
   }
   return ( //restituisco il jsx
-    <div className='pl-25'>
-      <h1 className='bgcolor-aqua'>Task Manager</h1> 
+    <div>
+      <header className='bgcolor-aqua'>
+        <h1 className='pl-25 line-h-100'>Task Manager</h1> 
+      </header> 
+      <main className='pl-25'>
       <div>
          <h3>Current Task {notCompletedCount}</h3> {/*qui vado a restituire il valore del primo count */}
       </div>
       <div>{
          notCompleted.map((el)=>{  {/*qui per ogni elemento vado a restituire un jsx */}
           return (
-            <div key = {el.id}>
+            <div className='pb-20' key = {el.id}>
               <p>
                 <span className='p-10r'><strong>{el.title}</strong></span>
                 <span className='bgcolor-orange'> {el.state}</span>
@@ -38,7 +41,7 @@ function App() {
         {
           tasks.filter((el)=>el.state =='completed').map((el)=>{
             return (
-              <div key = {el.id}>
+              <div className='pb-20' key = {el.id}>
                 <p>
                   <span className='p-10r'><strong>{el.title}</strong></span>
                   <span className='bgcolor-orange'>{el.state}</span>
@@ -50,6 +53,7 @@ function App() {
           })
         }
       </div>
+      </main>
     </div>
   )
 }
