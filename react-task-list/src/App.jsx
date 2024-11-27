@@ -1,5 +1,6 @@
 import './App.css'
 import { tasks } from './tasks'
+import { NavBar } from './assets/components/navbar.jsx'
 function App() {
   let notCompletedCount=0 //creo una var 
   const notCompleted = tasks.filter((el)=>el.state !='completed') //filtro l'array, facenbdomi restituire i valori che mi interessano
@@ -11,6 +12,7 @@ function App() {
   }
   return ( //restituisco il jsx
     <div>
+      <NavBar/>
       <header className='bgcolor-aqua mb-20'>
         <h1 className='pl-25 line-h-70'>Task Manager</h1> 
       </header> 
